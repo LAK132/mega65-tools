@@ -121,7 +121,7 @@ void timestamp_msg(char *msg)
 {
   if (!start_time) start_time=time(0);
 #ifdef WINDOWS
-  fprintf(stderr,"[T+%I64dsec] %s",(long long)time(0)-start_time,msg);
+  fprintf(stderr,"[T+%lldsec] %s",(long long)time(0)-start_time,msg);
 #else
   fprintf(stderr,"[T+%lldsec] %s",(long long)time(0)-start_time,msg);
 #endif
